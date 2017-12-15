@@ -1,0 +1,186 @@
+@import "skin";
+.padding-content {
+    padding: 0 pxToRem(24)
+}
+.mb-20{
+    margin-bottom:pxToRem(40);
+}
+
+/* 我的 */
+
+.home-index {
+    .index-top {
+        padding-top: pxToRem(18);
+        padding-bottom: pxToRem(50);
+        color: $white;
+        background-color: $red;
+    }
+    .index-top {
+        .user-info{
+            i{
+                position: relative;
+                display: inline-block;
+                width:pxToRem(47);
+                height:pxToRem(47);
+                border-radius: 50%;
+                font-size:pxToRem(55);
+                color:$white;
+                background: $bg-5e96fe;
+                &::before{
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            span{
+                line-height: pxToRem(47);
+            }
+        }
+        .user-name {
+            margin-bottom: pxToRem(30);
+            font-size: pxToRem(26);
+        }
+        .user-asset {
+            margin-top:pxToRem(48);
+            h3 {
+                font-size: pxToRem(24);
+                font-weight: normal;
+            }
+            p {
+                font-size: pxToRem(30);
+            }
+            span {
+                font-size: pxToRem(46);
+            }
+        }
+    }
+    .index-recharge {
+        padding-top: pxToRem(18);
+        padding-bottom: pxToRem(18);
+        background-color: $white;
+    }
+    .index-recharge {
+        .left {
+            line-height: 1.2;
+        }
+        .left p:first-child {
+            font-size: pxToRem(24);     
+            color: $ft-999;         
+        }
+        .left p:last-child {
+            font-size: pxToRem(36);
+            color: $ft-1b2b3f;
+        }
+        .right {
+            padding-top: pxToRem(5);
+        }
+        .right a {
+            float: left;
+            width: pxToRem(140);
+            height: pxToRem(60);
+            line-height: pxToRem(60);
+            font-size: pxToRem(30);
+            box-sizing: border-box;
+        }
+        .right a:first-child {
+            border: 1px solid $red;
+            color: $red;
+        }
+        .right a:last-child {
+            margin-left: 12px;
+            color: $white;
+            background-color: $f6aa2d;
+        }
+    }
+}
+
+.set-list {
+    .module {
+        margin-top: pxToRem(20);
+        background-color: $white;
+    }
+    .module-item,.item-left,.item-right {
+        position: relative;
+        display: block;
+        height: pxToRem(96);
+        line-height: pxToRem(96);
+        font-size: pxToRem(32);
+        color: $ft-1b2b3f;
+    }
+    .item-left,.item-right{
+        width:50%;
+        font-size:pxToRem(32);
+        color:$ft-666;
+    }
+    .item-right{
+        &::before{
+            content: "";
+            position: absolute;
+            top:50%;
+            left:pxToRem(-1);
+            width:pxToRem(2);
+            height: pxToRem(46);
+            background: $ft-dedede;
+            transform: translateY(-50%);
+        }
+    }
+    .module-item+.module-item {
+        border-top: 1px solid $ft-dedede;
+    }
+    .module-item>i:first-child {
+        width: pxToRem(56);
+        font-size: pxToRem(40);
+        color: $red;
+    }
+    .module-item i:last-child {
+        margin-left: pxToRem(20);
+        color: $ft-999;
+    }
+    .module-item i.icon-arrow {
+        font-size: pxToRem(22);
+        color: $graycolor;
+    }
+    .module-item .msg {
+        position: relative;
+        top: 50%;
+        min-width: 18px;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 2px;
+        margin: -11px 0 0 3px;
+        text-align: center;
+        font-size: pxToRem(20);
+        color: $white;
+        background-color: $yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+}
+
+.menu-msg {
+    position: relative;
+    padding-right: pxToRem(16);
+    font-size: pxToRem(36);
+}
+
+.menu-msg-num {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 2px;
+    margin-top: -20px;
+    font-size: pxToRem(20);
+    color: $white;
+    background-color: $yellow;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.set-btn {
+    @include btn;
+    border-radius: pxToRem(80);
+}
